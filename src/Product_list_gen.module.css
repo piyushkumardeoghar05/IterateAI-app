@@ -1,0 +1,93 @@
+
+.promptstat{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #ffffff; /* Dark gray color */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-top: px;
+    /* border: 2px solid red; */
+}
+.promptContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid white;
+    margin: 20px;
+    margin-bottom: 0;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.inputfield{
+    width:50vw;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin: 20px;
+    margin-right: 0;
+}
+.btn{
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 9px;
+    height: 50px;
+    width: 200px;
+
+}
+
+.errorstat{
+    color: red;
+    font-size: 20px;
+
+}
+ .allimgContainer{
+    color: white;
+    padding: 3vw;
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 10px;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+}
+/*
+.imgContainer{
+    width: 40px;
+    height: 40px;
+}
+.image{
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+} */
+.loading{
+    color: white;
+
+}
+.listcontainer{
+    color: white;
+    
+}
+.listcontainer2{
+display: flex;
+flex-direction: column;
+color: white;
+}
+@media screen and (max-width: 600px) {
+    .inputfield {
+      font-size: 14px;
+    }
+  }

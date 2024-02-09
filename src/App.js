@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Image_gen from './image_gen';
+import Product_list_gen from './product_list_gen'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Image_gen/>
+      <Product_list_gen/>
     </div>
   );
 }
 
 export default App;
+//api_key= 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
