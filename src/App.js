@@ -1,4 +1,6 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
+
 import Image_gen from './image_gen';
 import Product_list_gen from './product_list_gen'
 function App() {
