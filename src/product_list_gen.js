@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Product_list_gen.module.css";
-
+// require('dotenv').config();
 const ProductList = () => {
   const [idea, setIdea] = useState("");
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
-  const apiKey = open_ai_key; // Replace with your actual API key
+  const apiKey = process.env.REACT_APP_OPEN_AI_KEY; // Replace with your actual API key
+  // console.log(process.env.REACT_APP_OPEN_AI_KEY);
   const endpoint = "https://api.openai.com/v1/chat/completions";
 
   useEffect(() => {
