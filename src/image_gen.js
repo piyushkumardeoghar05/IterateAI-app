@@ -3,7 +3,8 @@ import classes from './Image_gen.module.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const OPENAI_API_KEY = process.env.REACT_APP_OPEN_AI_KEY;
+const UNSPLASH_KEY = "ztTcKBc2b81fJZTHkOhw-kz8JAHp33RhB0332Tq4EUI";
+// console.log(process.env.REACT_APP_UNSPLASH_ACCESS_KEY);
 
 function App() {
     const [prompt, setPrompt] = useState('A cute baby sea otter');
@@ -24,25 +25,16 @@ function App() {
         setIsError(false);
 
         try {
-            const requestData = {
-                prompt: prompt,
-                n: 1,
-                size: '256x256', // Set the desired image size here
-            };
-
-            const headers = {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${OPENAI_API_KEY}`,
-            };
-
-            const response = await axios.post('https://api.openai.com/v1/images/generations', requestData, {
-                headers: headers,
+            const response = await axios.get('https://api.unsplash.com/photos/random', {
+                params: {
+                    query: prompt,
+                    client_id: UNSPLASH_KEY,
+                },
             });
 
-            setGeneratedImages(response.data.data);
+            setGeneratedImages([{ url: response.data.urls.regular }]);
         } catch (error) {
             console.error('Error generating images:', error);
-            if(prompt!='')
             setIsError(true);
         } finally {
             setIsLoading(false);
@@ -72,7 +64,7 @@ function App() {
                                     <img
                                         className={classes.image}
                                         src={image.url}
-                                        style={{ width: '50px',borderRadius: '8px' }}
+                                        style={{ width: '50px',borderRadius: '8px',height:'50px' }}
                                         alt={`Generated Image ${index}`}
                                     />
                                 </div>

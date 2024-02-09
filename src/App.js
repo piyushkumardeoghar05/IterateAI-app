@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Image_gen/>
-      <Product_list_gen/>
+      {/* <Product_list_gen/> */}
     </div>
   );
 }
