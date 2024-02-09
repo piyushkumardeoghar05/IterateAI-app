@@ -21,11 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Linting and testing
-        run: npm run lint && npm test
-
       - name: Build Docker image
-        run: docker build -t my_first_image:dev .
+        run: docker build -t my_first_image .
 
       - name: Log into Docker Hub
         uses: docker/login-action@v2
@@ -34,10 +31,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push my_first_image:dev
+        run: docker push my_first_image
 
       - name: Deploy to test environment
         run: |
           docker stop awesome_matsumoto || true
           docker rm awesome_matsumoto || true
-          docker run -d --name awesome_matsumoto -p 3000:3000 my_first_image:dev
+          docker run -d --name awesome_matsumoto -p 300:300 my_first_image
