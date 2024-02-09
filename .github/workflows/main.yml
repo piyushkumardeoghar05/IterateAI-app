@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t my_first_image .
+        run: docker build -t my_second_image .
 
       - name: Log into Docker Hub
         uses: docker/login-action@v2
@@ -31,10 +31,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push my_first_image
+        run: docker push my_second_image
 
       - name: Deploy to test environment
         run: |
-          docker stop awesome_matsumoto || true
-          docker rm awesome_matsumoto || true
-          docker run -d --name awesome_matsumoto -p 300:300 my_first_image
+          docker stop recursing_cray || true
+          docker rm recursing_cray || true
+          docker run -d --name recursing_cray -p 300:300 my_second_image
