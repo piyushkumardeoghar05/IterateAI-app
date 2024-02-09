@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/IterateAI-app/static/css/main.c85f4d94.css",
-    "main.js": "/IterateAI-app/static/js/main.788bb90b.js",
+    "main.js": "/IterateAI-app/static/js/main.d5fa7d11.js",
     "index.html": "/IterateAI-app/index.html",
     "main.c85f4d94.css.map": "/IterateAI-app/static/css/main.c85f4d94.css.map",
-    "main.788bb90b.js.map": "/IterateAI-app/static/js/main.788bb90b.js.map"
+    "main.d5fa7d11.js.map": "/IterateAI-app/static/js/main.d5fa7d11.js.map"
   },
   "entrypoints": [
     "static/css/main.c85f4d94.css",
-    "static/js/main.788bb90b.js"
+    "static/js/main.d5fa7d11.js"
   ]
 }
