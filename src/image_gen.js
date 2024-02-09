@@ -3,7 +3,7 @@ import classes from './Image_gen.module.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = open_ai_key;
 
 function App() {
     const [prompt, setPrompt] = useState('A cute baby sea otter');

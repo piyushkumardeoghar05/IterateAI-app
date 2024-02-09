@@ -6,7 +6,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
-  const apiKey = "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"; // Replace with your actual API key
+  const apiKey = open_ai_key; // Replace with your actual API key
   const endpoint = "https://api.openai.com/v1/chat/completions";
 
   useEffect(() => {
